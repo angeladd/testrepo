@@ -1,0 +1,109 @@
+theia@theia-adobbs:/home/project$ # import pandas as pd
+theia@theia-adobbs:/home/project$ import pandas as pd
+bash: import: command not found
+theia@theia-adobbs:/home/project$ # Import required libraries
+import pandas as pd
+import dash
+import dash_html_components as html
+import dash_core_components as dcc
+from dash.dependencies import Input, Output
+import plotly.express as px
+ 
+# Read the airline data into pandas dataframe
+spacex_df = pd.read_csv("https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/datasets/spacex_launch_dash.csv")
+max_payload = spacex_df['Payload Mass (kg)'].max()
+min_payload = spacex_df['Payload Mass (kg)'].min()
+ 
+# Create a dash application
+app = dash.Dash(__name__)
+ 
+# Create an app layout
+app.layout = html.Div(children=[
+    html.H1('SpaceX Launch Records Dash',
+            style={'textAlign': 'center', 'color': '#503D36','font-size': 40}),
+ 
+    # TASK 1: Add a dropdown list to enable Launch Site selection
+    dcc.Dropdown(
+        id='site-dropdown',
+        options=[
+            {'label': 'All Sites', 'value': 'ALL'},
+            {'label': 'CCAFS LC-40', 'value': 'CCAFS LC-40'},
+            {'label': 'CCAFS SLC-40', 'value': 'CCAFS SLC-40'},
+            {'label': 'KSC LC-39A', 'value': 'KSC LC-39A'},
+            {'label': 'VAFB SLC-4E', 'value': 'VAFB SLC-4E'}
+        ],
+        value='ALL',
+        placeholder="Place holder site here",
+        searchable=True
+    ),
+    html.Br(),
+ 
+    # TASK 2: Add a pie chart to show the total successful launches count for all sites
+    html.Div(dcc.Graph(id='success-pie-chart')),
+    html.Br(),
+ 
+    html.P("Payload range (Kg):"),
+    app.run_server()in__':itle=f'Payload vs. Success for site {entered_site}'))]&re'),
+bash: import: command not found
+bash: import: command not found
+bash: import: command not found
+bash: import: command not found
+bash: from: command not found
+bash: import: command not found
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `'SpaceX Launch Records Dash','
+bash: syntax error near unexpected token `)'
+bash: syntax error near unexpected token `newline'
+bash: {label:: command not found
+bash: {label:: command not found
+bash: {label:: command not found
+bash: {label:: command not found
+bash: {label:: command not found
+bash: ],: command not found
+bash: syntax error near unexpected token `)'
+bash: syntax error near unexpected token `,'
+bash: syntax error near unexpected token `dcc.Graph'
+bash: syntax error near unexpected token `,'
+bash: syntax error near unexpected token `"Payload range (Kg):"'
+bash: syntax error near unexpected token `newline'
+bash: 0(Kg),2500:: command not found
+bash: max_payload]: command not found
+bash: syntax error near unexpected token `)'
+bash: syntax error near unexpected token `dcc.Graph'
+bash: syntax error near unexpected token `)'
+bash: syntax error near unexpected token `newline'
+bash: syntax error near unexpected token `component_id='success-pie-chart','
+bash: syntax error near unexpected token `component_id='site-dropdown','
+bash: syntax error near unexpected token `)'
+bash: syntax error near unexpected token `('
+bash: filtered_df: command not found
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `)'
+bash: else:: command not found
+bash: filtered_df: command not found
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `)'
+bash: return: fig: numeric argument required
+bash: return: can only `return' from a function or sourced script
+bash: syntax error near unexpected token `newline'
+bash: syntax error near unexpected token `component_id='success-payload-scatter-chart','
+bash: syntax error near unexpected token `component_id='site-dropdown','
+bash: syntax error near unexpected token `component_id="payload-slider",'
+bash: syntax error near unexpected token `)'
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `]'
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `)'
+bash: else:: command not found
+bash: filtered_df: command not found
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `)'
+bash: return: fig: numeric argument required
+bash: return: can only `return' from a function or sourced script
+>    
